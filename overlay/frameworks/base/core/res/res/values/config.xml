@@ -121,7 +121,7 @@
     </string-array>
 
     <!-- Boolean indicating whether the wifi chipset has dual frequency band support -->
-    <bool translatable="false" name="config_wifi_dual_band_support">true</bool>
+    <bool translatable="false" name="config_wifi_dual_band_support">false</bool>
 
     <!-- Boolean indicating whether the wifi chipset has background scan support -->
     <bool translatable="false" name="config_wifi_background_scan_support">false</bool>
@@ -305,11 +305,18 @@
             32 - Camera
         For example, a device with Home, Back and Menu keys would set this
         config to 7. -->
-    <integer name="config_deviceHardwareKeys">0</integer>
+    <integer name="config_deviceHardwareKeys">1</integer>
 
     <!-- Device supports LED flashlight -->
     <bool name="config_enableTorch">true</bool>
 
     <!-- Disable lockscreen translucent decor by default -->
     <bool name="config_enableLockScreenTranslucentDecor">true</bool>
+
+    <!-- Enable the option to check proximity sensor when deciding whether to
+         turn the screen on.
+         NOTE ! - Enable for devices that have a fast response proximity sensor -->
+    <bool name="config_proximityCheckOnWake">true</bool>
+    <integer name="config_proximityCheckTimeout">400</integer>
+
 </resources>
