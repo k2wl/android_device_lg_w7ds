@@ -21,10 +21,5 @@
 # function: add_lunch_combo generic-eng
 
 #dd_lunch_combo full_mb526-eng
-<<<<<<< HEAD
-add_lunch_combo cm_w7-userdebug
-add_lunch_combo aosp_w7-userdebug
-=======
-add_lunch_combo tg_w7-userdebug
->>>>>>> b0e79f789c2283c95e15ecec63b78f8f92ed2665
 
+add_lunch_combo tg_w7-userdebug
