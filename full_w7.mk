@@ -14,9 +14,11 @@
 # limitations under the License.
 #
 
-# Inherit from those products. Most specific first.
-$(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
+# Inherit from the common Open Source product configuration
+$(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base_telephony.mk)
+
 $(call inherit-product, device/lge/w7/device_w7.mk)
+$(call inherit-product-if-exists, vendor/lge/w7/w7-vendor.mk)
 
 ## Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := w7
@@ -26,4 +28,4 @@ PRODUCT_MODEL := w7
 PRODUCT_MANUFACTURER := LGE
 PRODUCT_RESTRICT_VENDOR_FILES := false
 
-$(call inherit-product-if-exists, vendor/lge/w7/w7-vendor.mk)
+
